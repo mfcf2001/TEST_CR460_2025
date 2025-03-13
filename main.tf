@@ -19,10 +19,10 @@ terraform {
 provider "azurerm" {
   features {}
 
-  subscription_id = "ed3d6041-1bcc-4a73-9583-fc489a376bba"
+  /*subscription_id = "ed3d6041-1bcc-4a73-9583-fc489a376bba"
   client_id       = "c44b4083-3bb0-49c1-b47d-974e53cbdf3c"
   # client_secret   = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-  tenant_id       = "a1728a60-1d50-4dcf-b851-ff698129a3e5"
+  tenant_id       = "a1728a60-1d50-4dcf-b851-ff698129a3e5"*/
 }
 
 #  Groupe de ressources
@@ -57,7 +57,7 @@ resource "azurerm_linux_web_app" "web_app" {
 #  Configuration du déploiement Git
 resource "azurerm_app_service_source_control" "git_deploy" {
   app_id   = azurerm_linux_web_app.web_app.id
-  repo_url = "hhttps://github.com/mfcf2001/git_test.git" # Remplacez par votre repo GitHub
+  repo_url = "https://github.com/mfcf2001/TEST_CR460_2025.git" # Remplacez par votre repo GitHub
   branch   = "main"
   use_manual_integration = true
 }
